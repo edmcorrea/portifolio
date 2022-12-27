@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  /* COLOCAR UMA IMAGEM COM O CORPO MAIS INTEIRO E SEM SOBRAS NA PARTE SUPERIOR */
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: black;
+  background-image: url(../images/img.png);
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  font-size: 120px;
+  font-weight: 700;
+}
+
+.btnTranslate {
+  border: none;
+  color: white;
+  font-size: 25px;
+  background-color: black;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  width: 200px;
+  margin: 0;
+}
+
+.btnTranslate:hover {
+  color: rgb(216, 2, 2);;
+} 
+
+.home-section {
+  padding: 10% 15%;
+}
+
+.home-child-sections {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.home a {
+  text-decoration: none;
+}
+
+.links {
+  transition: padding 0.5s;
+}
+
+.links:hover {
+  padding: 0 6%;
+}
+
+.links:visited, .links:link {
+  color: white;
+}
+
+.static {
+  display: inline;
+}
+
+.red {
+  color: rgb(216, 2, 2);
+}
+
+.red:visited, .red:link {
+  color: rgb(216, 2, 2);
+}

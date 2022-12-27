@@ -1,0 +1,48 @@
+.contact {
+  background-color: black;
+  /* height: 100vh; */
+  color: white;
+}
+
+.intro-contact {
+  padding: 0 180px;
+  font-variant: small-caps;
+  /* font-size: 20px; */
+}
+
+.name-contact {
+  font-size: 70px;
+  padding: 150px 0;
+  /* border: 1px solid red; */
+}
+
+.intro-contact h2 {
+  padding-bottom: 40px;
+}
+
+.intro-contact p {
+  text-align: justify;
+  font-size: 20px;
+  padding-bottom: 25px;
+}
+
+.intro-contact a {
+  transition: padding 0.5s;
+  font-size: 20px;
+  padding-bottom: 25px;
+  text-decoration: none;
+}
+
+.hrefs {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+}
+
+.intro-contact a:hover {
+  padding: 0 2%;
+  color: white;
+  font-size: 20px;
+  padding-bottom: 25px;
+  text-decoration: none;
+}

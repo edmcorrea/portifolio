@@ -1,0 +1,83 @@
+.about {
+  background-color: black;
+  color: white;
+}
+
+.intro-about {
+  padding: 90px 180px;
+  font-variant: small-caps;
+  font-size: 20px;
+}
+
+.intro-about p {
+  font-variant: small-caps;
+  font-size: 20px;
+  padding-bottom: 25px;
+  text-align: justify;
+}
+
+.name-about {
+  font-size: 50px;
+}
+
+.name-about h1 {
+  padding-bottom: 90px;
+}
+
+.skills {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills h1 {
+  font-size: 40px;
+  padding: 25px 0;
+}
+
+.back-front {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.back-front div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-front ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+}
+
+.back-front h4 {
+  padding: 15px 0;
+  font-variant: small-caps;
+  font-size: 20px;
+  color: rgb(216, 2, 2);
+}
+
+.adicionais {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.adicionais h2 {
+  padding: 15px 0;
+}
+
+.adicionais ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+  width: 50%;
+}
