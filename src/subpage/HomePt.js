@@ -45,10 +45,10 @@ class HomePt extends React.Component {
             { hoverWork
             ? (
             <Link
-              to="/work" className='links red'
+              to="/projects" className='links red'
               onMouseLeave={this.hoverHandlerWork}
             >
-              Trabalhos
+              Projetos
             </Link>
             ) : (
             <p className='static red' onMouseEnter={this.hoverHandlerWork}>Eu Sou</p>
@@ -58,7 +58,7 @@ class HomePt extends React.Component {
             { hoverContact
             ? (
             <Link
-              to="/work" className='links red'
+              to="/contact" className='links red'
               onMouseLeave={this.hoverHandlerContact}
             >
               Contato

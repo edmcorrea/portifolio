@@ -12,7 +12,7 @@ class Header extends Component {
           <h4>Corrêa.</h4>
           <p>Home</p>
         </Link>
-        <p>Traduzir</p>
+        {/* <p>Traduzir</p> */}
         <Link to={`/${routeHeader}`}>
           <h4>Corrêa.</h4>
           <p>{routeHeader}</p>

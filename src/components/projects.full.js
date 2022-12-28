@@ -1,14 +1,14 @@
 import React from 'react';
 
-class ProjectsFront extends React.Component {
+class ProjectsFull extends React.Component {
   render() {
     return (
       <div>
         <p>oi</p>
-        <p>ProjectsFront</p>
+        <p>ProjectsFull</p>
       </div>
     );
   }
 }
 
-export default ProjectsFront;
+export default ProjectsFull;

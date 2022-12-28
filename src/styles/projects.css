@@ -1,4 +1,45 @@
-.work {
+.project {
   background-color: black;
-  height: 100vh;
+  /* height: 100vh; */
+  color: white;
+}
+
+.intro-project {
+  padding: 90px 180px;
+  font-variant: small-caps;
+  font-size: 20px;
+}
+
+.name-project {
+  font-size: 70px;
+  padding-bottom: 80px;
+}
+
+.projects-button {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.projects-button button {
+  background-color: black;
+  font-size: 25px;
+}
+
+.projects-button button:hover {
+  color: white;
+}
+
+.true {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-bottom: 2px solid rgb(216, 2, 2);
+  font-size: 25px;
+  padding: 7px;
+}
+
+.false {
+  border: 1px solid black;
+  color: #555555;
 }
