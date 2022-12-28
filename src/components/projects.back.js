@@ -1,25 +1,34 @@
 import React from 'react';
 
 class ProjectsBack extends React.Component {
+  state = {
+    hover: true
+  }
+
+  hoverHandler = () => {
+    const { hover } = this.state;
+    this.setState({ hover: !hover })
+  }
   render() {
+    const { mock } = this.props;
+    const { hover } = this.state;
     return (
       <div>
-        <p>oi</p>
-        <p>ProjectsBack</p>
-        <section className='hrefs'>
-            <a className='red' href="mailto:edm.correa@hotmail.com">
-                E-mail
+        <section className='project'>
+          {hover
+          ? (
+            <div onMouseEnter={this.hoverHandler}>
+              <p>{mock.title}</p>
+            </div>
+          ) : (
+            <div onMouseLeave={this.hoverHandler}>
+              <p>{mock.description}</p>
+              <a className='' href={mock.site} target="_blank" rel="noreferrer">
+                  Visite o Repositório
               </a>
-              <a className='red' href="https://www.linkedin.com/in/edmilsoncorrea/" target="_blank" rel="noreferrer">
-                Linkendin
-              </a>
-              <a className='red' href="https://github.com/edmcorrea" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-              <a className='red' href="https://wa.me/5575992027967" target="_blank" rel="noreferrer">
-                WhatsApp
-              </a>
-           </section>
+            </div>
+          )}
+        </section>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import Header from '../components/header';
 import ProjectsBack from '../components/projects.back';
 import ProjectsFront from '../components/projects.front';
 import ProjectsFull from '../components/projects.full';
+import { mockBack } from '../mocks-projects/mock.back';
 import '../styles/projects.css';
 
 class Projects extends React.Component {
@@ -28,7 +29,7 @@ class Projects extends React.Component {
   render() {
     const { back, full, front } = this.state;
     return (
-      <div className='project'>
+      <div className='project-page'>
         <Header routeHeader="Contact"/>
         <section className='intro-project'>
           <div className='name-project'>
@@ -60,7 +61,7 @@ class Projects extends React.Component {
             </button>
           </div>
           <div className='projects'>
-            {back && <ProjectsBack />}
+            {back && mockBack.map((e) => <ProjectsBack mock={e} />)}
             {full && <ProjectsFull />}
             {front && <ProjectsFront />}
           </div>
