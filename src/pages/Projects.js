@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from '../components/header';
-import ProjectsBack from '../components/projects.back';
-import ProjectsFront from '../components/projects.front';
-import ProjectsFull from '../components/projects.full';
+import ProjectsDetails from '../components/projects.details';
 import { mockBack } from '../mocks-projects/mock.back';
 import '../styles/projects.css';
 
@@ -61,9 +59,9 @@ class Projects extends React.Component {
             </button>
           </div>
           <div className='projects'>
-            {back && mockBack.map((e) => <ProjectsBack mock={e} />)}
-            {full && <ProjectsFull />}
-            {front && <ProjectsFront />}
+            {back && mockBack.map((e) => <ProjectsDetails mock={e} />)}
+            {full && <ProjectsDetails />}
+            {front && <ProjectsDetails />}
           </div>
         </section>
       </div>

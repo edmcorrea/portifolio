@@ -9,7 +9,7 @@
   background-color: black;
   background-image: url(../images/img.png);
   background-repeat: no-repeat;
-  background-size: 55%;
+  background-size: 50%;
   background-position: right;
   display: flex;
   flex-direction: column;
@@ -17,9 +17,10 @@
   color: white;
   font-size: 120px;
   font-weight: 700;
+  justify-content: center;
 }
 
-.btnTranslate {
+/* .btnTranslate {
   border: none;
   color: white;
   font-size: 25px;
@@ -29,18 +30,20 @@
   left: 50%;
   width: 200px;
   margin: 0;
-}
+} */
 
 .btnTranslate:hover {
-  color: rgb(216, 2, 2);;
+  color: rgb(216, 2, 2);
 } 
 
 .home-section {
-  padding: 10% 15%;
+  height: 100%;
+  padding: 0 15%;
 }
 
 .home-child-sections {
   background-color: rgba(0, 0, 0, 0);
+  
 }
 
 .home a {
