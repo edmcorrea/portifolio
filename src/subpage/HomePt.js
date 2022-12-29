@@ -9,19 +9,17 @@ class HomePt extends React.Component {
     hoverContact: false
   }
 
-  hoverHandlerAbout = () => {
-    const { hoverAbout } = this.state;
-    this.setState({ hoverAbout: !hoverAbout })
-  }
-
-  hoverHandlerWork = () => {
-    const { hoverWork } = this.state;
-    this.setState({ hoverWork: !hoverWork })
-  }
-
-  hoverHandlerContact = () => {
-    const { hoverContact } = this.state;
-    this.setState({ hoverContact: !hoverContact })
+  hoverHandler = (value) => {
+    const { hoverAbout, hoverWork, hoverContact } = this.state;
+    if(value === 'about') {
+      this.setState({ hoverAbout: !hoverAbout });
+    };
+    if(value === 'projects') {
+      this.setState({ hoverWork: !hoverWork });
+    };
+    if(value === 'contact') {
+      this.setState({ hoverContact: !hoverContact });
+    };
   }
 
   render() {
@@ -33,12 +31,12 @@ class HomePt extends React.Component {
             ? (
             <Link
               to="/about" className='links'
-              onMouseLeave={this.hoverHandlerAbout}
+              onMouseLeave={() => this.hoverHandler('about')}
             >
               Sobre
             </Link>
             ) : (
-            <p className='static' onMouseEnter={this.hoverHandlerAbout}>Olá.</p>
+            <p className='static' onMouseEnter={() => this.hoverHandler('about')}>Olá.</p>
             )}
           </section>
           <section className='home-child-sections'>
@@ -46,12 +44,12 @@ class HomePt extends React.Component {
             ? (
             <Link
               to="/projects" className='links red'
-              onMouseLeave={this.hoverHandlerWork}
+              onMouseLeave={() => this.hoverHandler('projects')}
             >
               Projetos
             </Link>
             ) : (
-            <p className='static red' onMouseEnter={this.hoverHandlerWork}>Eu Sou</p>
+            <p className='static red' onMouseEnter={() => this.hoverHandler('projects')}>Eu Sou</p>
             )}
           </section>
           <section className='home-child-sections'>
@@ -59,12 +57,12 @@ class HomePt extends React.Component {
             ? (
             <Link
               to="/contact" className='links red'
-              onMouseLeave={this.hoverHandlerContact}
+              onMouseLeave={() => this.hoverHandler('contact')}
             >
               Contato
             </Link>
             ) : (
-            <p className='static red' onMouseEnter={this.hoverHandlerContact}>E. Corrêa</p>
+            <p className='static red' onMouseEnter={() => this.hoverHandler('contact')}>E. Corrêa</p>
             )}
           </section>
         </section>

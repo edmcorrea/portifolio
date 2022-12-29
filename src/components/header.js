@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
-    const { routeHeader } = this.props;
+    // const { routeHeader } = this.props;
     return (
       <div className='header'>
         <Link className='headLinks' to="/">
@@ -13,10 +13,10 @@ class Header extends Component {
           <p>Home</p>
         </Link>
         {/* <p>Traduzir</p> */}
-        <Link to={`/${routeHeader}`}>
+        {/* <Link to={`/${routeHeader}`}>
           <h4>Corrêa.</h4>
           <p>{routeHeader}</p>
-        </Link>
+        </Link> */}
       </div>
     );
   }

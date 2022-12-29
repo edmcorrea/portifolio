@@ -13,7 +13,6 @@ class Projects extends React.Component {
   }
 
   handleClick = (value) => {
-    // const { back, full, front } = this.state;
     if(value ==='back') {
       this.setState({ back: true, full: false, front: false })
     }
@@ -29,7 +28,7 @@ class Projects extends React.Component {
     const { back, full, front } = this.state;
     return (
       <div className='project-page'>
-        <Header routeHeader="Contact"/>
+        <Header routeHeader="Contato"/>
         <section className='intro-project'>
           <div className='name-project'>
             <h1>Meus</h1>
@@ -44,13 +43,13 @@ class Projects extends React.Component {
             >
               Back-End
             </button>
-            <button
+            {/* <button
               className={ `${full}` }
               type='button'
               onClick={() => this.handleClick('full')}
             >
               Full-Stack
-            </button>
+            </button> */}
             <button
               className={ `${front}` }
               type='button'
