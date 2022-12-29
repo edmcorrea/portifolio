@@ -1,6 +1,6 @@
-export const mockBack = [
+export const mockFront = [
   {
-    title: 'BLOG API',
+    title: 'APP DE RECEITAS',
     bgImage: "https://static.significados.com.br/foto/blog-og.jpg",
     description: 'Desenvolvido uma API com Sequelize para a produção de conteúdo para um blog com Sequelize',
     site: 'https://github.com/edmcorrea/Blogs-API---Back-End'
