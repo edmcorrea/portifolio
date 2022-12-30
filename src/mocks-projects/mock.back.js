@@ -17,4 +17,10 @@ export const mockBack = [
     description: 'Desenvolvido uma loja de itens medievais, no formato de uma API, utilizando Typescript e MySQL',
     site: 'https://github.com/edmcorrea/medieval-shop'
   },
+  {
+    title: 'TALKER MANAGER',
+    bgImage: "https://media.istockphoto.com/id/1176842771/photo/serious-black-manager-talk-to-diverse-staff-people-at-meeting.jpg?s=170667a&w=0&k=20&c=_tNwkNNJ_YyB9BLLv9jr5oqSs8F0jOXDe-F8YEM_L5o=",
+    description: 'Desenvolvido uma aplicação de cadastro de talkers (palestrantes) em que é possível cadastrar, visualizar, pesquisar, editar e excluir informações',
+    site: 'https://github.com/edmcorrea/talker-manager'
+  },
 ]

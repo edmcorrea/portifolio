@@ -17,4 +17,16 @@ export const mockFront = [
     description: 'Músicas de qualidade. Basta ouvir!',
     site: 'https://github.com/edmcorrea/projeto-music-stream-Spotunes-'
   },
+  {
+    title: 'MERCADO ONLINE STORE',
+    bgImage: "https://hubpme.com.br/wp-content/uploads/2018/08/mercado-online.jpg",
+    description: 'O que você precisa, perto de você!',
+    site: 'https://github.com/edmcorrea/Online-Story'
+  },
+  {
+    title: 'TRIVIA QUIZ',
+    bgImage: "https://img.quizur.com/f/img60a7f9ab724d91.66559885.png?lastEdited=1621621175",
+    description: 'Teste seus conhecimentos com o Trivia Quiz',
+    site: 'https://github.com/edmcorrea/trivia-quiz'
+  },
 ]
