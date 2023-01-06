@@ -40,6 +40,7 @@ class About extends React.Component {
                 <li>API Restful</li>
                 <li>POO</li>
                 <li>SOLID</li>
+                <li>DevOps</li>
               </ul>
             </div>
             <div> 
@@ -53,7 +54,7 @@ class About extends React.Component {
                 <li>Typescript</li>
               </ul>
               <h4>Ferramentas Dev:</h4>
-              <ul>
+              <li>
                 <li>React-Redux</li>
                 <li>React-Hooks</li>
                 <li>Context-API</li>
