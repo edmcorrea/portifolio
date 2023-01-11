@@ -6,7 +6,7 @@ export const mockBack = [
     site: 'https://github.com/edmcorrea/Blogs-API---Back-End'
   },
   {
-    title: 'STORY MANAGER',
+    title: 'STORE MANAGER',
     bgImage: "https://br.mobiletransaction.org/wp-content/uploads/2020/07/dropshipping-brasil.jpg",
     description: 'Desenvolvido um sistema de gerenciamento de vendas no formato dropshipping com MySQL',
     site: 'https://github.com/edmcorrea/story-manager'
