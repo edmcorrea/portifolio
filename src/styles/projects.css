@@ -26,7 +26,7 @@
 }
 
 .projects-button button:hover {
-  color: white;
+  color: rgb(216, 2, 2);
 }
 
 .true {
@@ -44,16 +44,43 @@
   border: 1px solid black;
   color: #555555;
   padding: 20px;
+  animation: myAnim 2s ease 1.5s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateX(-5px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateX(5px);
+	}
+
+	80% {
+		transform: translateX(3px);
+	}
+
+	90% {
+		transform: translateX(-3px);
+	}
 }
 
 .projects {
   background-color: rgb(22, 22, 22);
   border-radius: 30px;
   padding: 50px 3%;
-  /* flex-basis: 100px; */
   display: flex;
   flex-wrap: wrap;
-  /* flex-grow: 10; */
   justify-content: center;
   gap: 50px;
 }
@@ -118,5 +145,5 @@
 
 .btnRepo:hover {
   scale: 1.05;
-  border: 1px solid rgb(216, 2, 2);;
+  border: 1px solid rgb(216, 2, 2);
 }

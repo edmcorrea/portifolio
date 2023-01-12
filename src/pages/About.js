@@ -9,9 +9,18 @@ class About extends React.Component {
         <Header routeHeader="Projetos"/>
         <section className='intro-about'>
           <div className='name-about'>
-            <h1 className=''>Programador por Paixão,</h1>
-            <h1 className=''>Eng. Civil por Formação,</h1>
-            <h1 className=''>Professor nas Horas Vagas.</h1>
+            <section className='row'>
+              <h1 className='red name-about'>Programador</h1>
+              <h1 className=''>por Paixão,</h1>
+            </section>
+            <section className='row'>
+              <h1 className='red name-about'>Eng. Civil</h1>
+              <h1 className=''>por Formação,</h1>
+            </section>
+            <section className='row'>
+              <h1 className='red name-about'>Professor</h1>
+              <h1 className=''>nas Horas Vagas.</h1>
+            </section>
           </div>
           <p>Com 1 ano de experiência na área de programação, meu desejo é sempre superar minhas próprias expectatvas e ser um agente de mudanças.</p>
           <p>Com mais de 12 anos de experiência em Educação e formado em Engenharia Civil com 4 anos de experiência, já coordenei profissionais em construções residenciais e shopping.</p>
@@ -54,7 +63,7 @@ class About extends React.Component {
                 <li>Typescript</li>
               </ul>
               <h4>Ferramentas Dev:</h4>
-              <li>
+              <ul>
                 <li>React-Redux</li>
                 <li>React-Hooks</li>
                 <li>Context-API</li>
