@@ -15,7 +15,7 @@ class Contact extends React.Component {
           <section>
             <h2>Contato</h2>
             <p>
-            Estou procurando oportunidades para colaborar com empresas/agências/indivíduos, não apenas trabalhar para eles. Quero levar minha experiência para um ambiente onde podemos trabalhar juntos para resolver problemas reais de uma forma que coloquemos em hamonia nossas experiências para um objetivo em comum.
+            Estou procurando oportunidades para colaborar com empresas/agências/indivíduos, não apenas trabalhar para eles. Quero levar minha experiência para um ambiente onde podemos trabalhar juntos para resolver problemas reais de uma forma que coloquemos em harmonia nossas experiências para um objetivo em comum.
             </p>
             <p>
               Busco por uma empresa que impacte a sociedade, com grandes sonhos, mente aberta (onde os egos estão fora de questão) e com o objetivo principal de satisfazer o cliente. Se faz sentido para você, então podemos caminhar juntos.
@@ -25,7 +25,7 @@ class Contact extends React.Component {
                 E-mail
               </a>
               <a className='red' href="https://www.linkedin.com/in/edmilsoncorrea/" target="_blank" rel="noreferrer">
-                Linkendin
+                Linkedin
               </a>
               <a className='red' href="https://github.com/edmcorrea" target="_blank" rel="noreferrer">
                 GitHub
