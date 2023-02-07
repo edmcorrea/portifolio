@@ -45,7 +45,7 @@ class About extends React.Component {
                 <li>Docker</li>
                 <li>Sequelize</li>
                 <li>MySQL - SQL</li>
-                <li>MongoDB</li>
+                <li>MongoDB / Mongoose</li>
                 <li>API Restful</li>
                 <li>POO</li>
                 <li>SOLID</li>
