@@ -32,7 +32,10 @@
 .true {
   background-color: #161616;
   color: white;
-  border: none;
+  border-top: 1px solid rgb(87, 87, 87);
+  border-left: 1px solid rgb(87, 87, 87);
+  border-right: 1px solid rgb(87, 87, 87);
+  border-bottom: 1px solid black;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   font-size: 25px;
@@ -77,6 +80,7 @@
 
 .projects {
   background-color: rgb(22, 22, 22);
+  border: 1px solid rgb(87, 87, 87);
   border-radius: 30px;
   padding: 50px 3%;
   display: flex;

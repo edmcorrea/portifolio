@@ -3,6 +3,7 @@ import Header from '../components/header';
 import ProjectsDetails from '../components/projects.details';
 import { mockBack } from '../mocks-projects/mock.back';
 import { mockFront } from '../mocks-projects/mock.front';
+import { mockFull } from '../mocks-projects/mock.full';
 import '../styles/projects.css';
 
 class Projects extends React.Component {
@@ -43,13 +44,13 @@ class Projects extends React.Component {
             >
               Back-End
             </button>
-            {/* <button
+            <button
               className={ `${full}` }
               type='button'
               onClick={() => this.handleClick('full')}
             >
               Full-Stack
-            </button> */}
+            </button>
             <button
               className={ `${front}` }
               type='button'
@@ -60,7 +61,7 @@ class Projects extends React.Component {
           </div>
           <div className='projects'>
             {back && mockBack.map((project) => <ProjectsDetails mock={project}/>)}
-            {full && mockFront.map((project) => <ProjectsDetails mock={project} />)}
+            {full && mockFull.map((project) => <ProjectsDetails mock={project} />)}
             {front && mockFront.map((project) => <ProjectsDetails mock={project} />)}
           </div>
         </section>
