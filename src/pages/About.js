@@ -31,34 +31,13 @@ class About extends React.Component {
         <section className='skills'>
           <h1>Hard Skills</h1>
           <section className='back-front'>
-            <div>
-              <h2>Back-End</h2>
-              <h4>Linguagem que domino:</h4>
-              <ul>
-                <li>Node.Js</li>
-                <li>Javascript</li>
-                <li>Typescript</li>
-              </ul>
-              <h4>Ferramentas Dev:</h4>
-              <ul>
-                <li>Express</li>
-                <li>Docker</li>
-                <li>Sequelize</li>
-                <li>MySQL - SQL</li>
-                <li>MongoDB / Mongoose</li>
-                <li>API Restful</li>
-                <li>POO</li>
-                <li>SOLID</li>
-                <li>DevOps</li>
-              </ul>
-            </div>
             <div> 
               <h2>Front-End</h2>
               <h4>Linguagem que domino:</h4>
               <ul>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>ReactJs</li>
+                <li>React.Js</li>
                 <li>Javascript</li>
                 <li>Typescript</li>
               </ul>
@@ -69,6 +48,40 @@ class About extends React.Component {
                 <li>Context-API</li>
                 <li>Bootstrap</li>
                 <li>SASS</li>
+                <li>UI / UX</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Back-End</h2>
+              <h4>Linguagem que domino:</h4>
+              <ul>
+                <li>Node.Js</li>
+                <li>Javascript</li>
+                <li>Typescript</li>
+                <li>C# / .Net</li>
+              </ul>
+              <h4>Ferramentas Dev:</h4>
+              <ul>
+                <li>Express</li>
+                <li>Sequelize</li>
+                <li>MySQL - SQL</li>
+                <li>API Restful</li>
+                <li>POO / SOLID</li>
+              </ul>
+            </div>
+            <div>
+              <h2>Ciência de Dados</h2>
+              <h4>Linguagem que domino:</h4>
+              <ul>
+                <li>Python</li>
+              </ul>
+              <h4>Ferramentas Dev:</h4>
+              <ul>
+                <li>Docker</li>
+                <li>Big Data</li>
+                <li>NoSQL</li>
+                <li>MongoDB / Mongoose</li>
+                <li>DevOps</li>
               </ul>
             </div>
           </section>
@@ -78,6 +91,7 @@ class About extends React.Component {
               <li>Slack</li>
               <li>GitHub - Git</li>
               <li>Figma</li>
+              <li>Docker</li>
             </ul>
           </div>
         </section>
