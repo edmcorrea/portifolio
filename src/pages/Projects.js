@@ -38,6 +38,13 @@ class Projects extends React.Component {
           </div>
           <div className='projects-button'>
             <button
+              className={ `${front}` }
+              type='button'
+              onClick={() => this.handleClick('front')}
+            >
+              Front-End
+            </button>
+            <button
               className={ `${back}` }
               type='button'
               onClick={() => this.handleClick('back')}
@@ -50,13 +57,6 @@ class Projects extends React.Component {
               onClick={() => this.handleClick('full')}
             >
               Full-Stack
-            </button>
-            <button
-              className={ `${front}` }
-              type='button'
-              onClick={() => this.handleClick('front')}
-            >
-              Front-End
             </button>
           </div>
           <div className='projects'>
