@@ -10,7 +10,7 @@ class Header extends Component {
       <div className='header'>
         <Link className='headLinks' to="/">
           <h4>Corrêa.</h4>
-          <p>Home</p>
+          <span>Home</span>
         </Link>
         {/* <p>Traduzir</p> */}
         {/* <Link to={`/${routeHeader}`}>
