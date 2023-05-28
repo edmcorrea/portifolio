@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/home.css';
+import portifolio from '../images/img.png';
 
 class HomePt extends React.Component {
   state = {
@@ -25,7 +26,8 @@ class HomePt extends React.Component {
   render() {
     const { hoverAbout, hoverWork, hoverContact } = this.state;
     return (
-        <section className='home-section'>
+      <div className='home-pt'>
+        <section className='home-sectionTexts'>
           <section className='home-child-sections'>
             { hoverAbout
             ? (
@@ -66,6 +68,10 @@ class HomePt extends React.Component {
             )}
           </section>
         </section>
+        <section className='home-sectionImg'>
+          <img className='home-img' src={portifolio} alt="Imagem-capa"/>
+        </section>
+      </div>
     );
   }
 }
