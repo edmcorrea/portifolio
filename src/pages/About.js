@@ -1,6 +1,10 @@
 import React from 'react';
 import Header from '../components/header';
 import '../styles/about.css';
+import frontSkill from '../images/front-skills.png';
+import backSkill from '../images/back-skills.png';
+import dsSkill from '../images/data-science-skills.png';
+
 
 class About extends React.Component {
   render() {
@@ -31,7 +35,8 @@ class About extends React.Component {
         <section className='skills'>
           <h1>Hard Skills</h1>
           <section className='back-front'>
-            <div> 
+            <div>
+              <img className='skill-img' src={frontSkill} alt="front-img"/>
               <h2>Front-End</h2>
               <h4>Linguagem que domino:</h4>
               <ul>
@@ -52,6 +57,7 @@ class About extends React.Component {
               </ul>
             </div>
             <div>
+              <img className='skill-img' src={backSkill} alt="back-img"/>
               <h2>Back-End</h2>
               <h4>Linguagem que domino:</h4>
               <ul>
@@ -70,6 +76,7 @@ class About extends React.Component {
               </ul>
             </div>
             <div>
+            <img className='skill-img' src={dsSkill} alt="data-science-img"/>
               <h2>Ciência de Dados</h2>
               <h4>Linguagem que domino:</h4>
               <ul>

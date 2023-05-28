@@ -23,11 +23,11 @@
 
 .row {
   display: flex;
+  padding-bottom: 90px;
   gap: 22px;
 }
 
 .name-about h1 {
-  padding-bottom: 90px;
   font-size: 1.5em;
 }
 
@@ -36,6 +36,11 @@
   margin: auto;
   flex-direction: column;
   align-items: center;
+}
+
+.skill-img {
+  width: 180px;
+  margin-bottom: 15px;
 }
 
 .skills h1 {
@@ -88,3 +93,26 @@
   padding-bottom: 50px;
   width: 50%;
 }
+
+@media (max-width: 1240px) {
+  .name-about {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .intro-about p {
+    font-size: 15px;
+  }
+
+  .back-front {
+    flex-direction: column;
+    gap: 70px;
+  }
+}
+
