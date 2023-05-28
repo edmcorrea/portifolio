@@ -81,8 +81,7 @@
 } */
 
 .projects {
-  background-color: rgb(32, 32, 32);
-  border-radius: 30px;
+  /* background-color: rgb(32, 32, 32); */
   padding: 50px 3%;
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +91,7 @@
 
 .project {
   height: 230px;
-  flex-basis: 28%;
+  flex-basis: 33%;
   border: 1px solid white;
   border-radius: 30px;
   display: flex;
@@ -108,7 +107,6 @@
 }
 
 .project div {
-  /* backdrop-filter: opacity(20%); */
   background: rgba(22, 22, 22, 0.3);
   background-position: center;
   background-size: 160%;
@@ -151,4 +149,35 @@
 .btnRepo:hover {
   scale: 1.05;
   border: 1px solid rgb(216, 2, 2);
+}
+
+@media (max-width: 1200px) {
+  .projects-button {
+    margin: 50px 0;
+  }
+
+  .projects {
+    gap: 30px;
+  }
+
+  .project {
+    flex-basis: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  .name-project {
+    font-size: 40px;
+    padding-bottom: 10px;
+  }
+
+  .projects-button {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .project {
+    flex-basis: 100%;
+  }
 }
