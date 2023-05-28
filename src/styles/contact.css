@@ -14,7 +14,6 @@
 .name-contact {
   font-size: 70px;
   padding: 150px 0;
-  /* border: 1px solid red; */
 }
 
 .intro-contact h2 {
@@ -46,4 +45,28 @@
   font-size: 25px;
   padding-bottom: 25px;
   text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .name-contact {
+    font-size: 50px;
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .name-contact {
+    font-size: 35px;
+    padding: 50px 0;
+  }
+
+  .intro-contact p {
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+
+  .intro-contact a {
+    font-size: 15px;
+  padding-bottom: 20px;
+  }
 }
