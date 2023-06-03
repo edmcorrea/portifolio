@@ -5,7 +5,7 @@
 }
 
 .intro-about {
-  padding: 90px 180px;
+  padding: 50px 180px;
   font-variant: small-caps;
   font-size: 20px;
 }
@@ -23,8 +23,19 @@
 
 .row {
   display: flex;
-  padding-bottom: 90px;
+  padding-bottom: 70px;
   gap: 22px;
+}
+
+.about-img-container {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.about-img {
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
+  margin: auto;
 }
 
 .name-about h1 {
