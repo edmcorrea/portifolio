@@ -89,21 +89,29 @@
   gap: 50px;
 }
 
+.project-details {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  align-items: center;
+  gap: 8px;
+}
+
 .project {
   height: 230px;
-  flex-basis: 33%;
   border: 1px solid white;
-  border-radius: 30px;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   transition: scale 0.3s;
   position: relative;
+  width: 380px;
 }
 
 .project:hover {
-  scale: 1.05;
+  scale: 1.01;
 }
 
 .project div {
@@ -112,7 +120,7 @@
   background-size: 160%;
   background-repeat: no-repeat;
   background-color: rgb(85, 85, 85, 0.3);
-  border-radius: 30px;
+  border-radius: 4px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -125,12 +133,25 @@
 .project-title {
   background-color: rgb(85, 85, 85, 0.68);
   backdrop-filter: opacity(20%);
-  border-radius: 30px;
+  border-radius: 4px;
   padding: 7px 25px;
 }
 
 .project-descript {
   padding: 0 7%;
+}
+
+.project-skills {
+  margin: 0 8px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.project-skills p {
+  background-color: rgb(85, 85, 85, 0.68);
+  border-radius: 4px;
+  padding: 0 2px;
 }
 
 .btnRepo {
@@ -158,6 +179,11 @@
 
   .projects {
     gap: 30px;
+  }
+
+  .project-details {
+
+    height: 400px;
   }
 
   .project {

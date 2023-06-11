@@ -13,7 +13,8 @@ class ProjectsBack extends React.Component {
     const { mock } = this.props;
     const { hover } = this.state;
     return (
-      <div className='project'>
+      <div className='project-details'>
+      <section className='project'>
         { hover
         ? (
           <div
@@ -30,6 +31,12 @@ class ProjectsBack extends React.Component {
             </a>
           </div>
         )}
+      </section>
+      <section className='project-skills'>
+        {mock.skills.map(skill => (
+          <p>{skill}</p>
+        ))}
+      </section>
       </div>
     );
   }
