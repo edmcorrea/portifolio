@@ -19,6 +19,7 @@
 
 .name-about {
   font-size: 50px;
+  position: relative;
 }
 
 .row {
@@ -28,18 +29,24 @@
 }
 
 .about-img-container {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   padding-bottom: 50px;
 }
 
 .about-img {
+  z-index: 1;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
   margin: auto;
+  width: 420px;
 }
 
 .name-about h1 {
   font-size: 1.5em;
+  z-index: 2;
 }
 
 .skills {
@@ -105,7 +112,10 @@
   width: 50%;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1340px) {
+  .about-img {
+    width: 350px;
+  }
   .name-about {
     font-size: 30px;
   }

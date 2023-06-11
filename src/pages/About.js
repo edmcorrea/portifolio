@@ -26,19 +26,21 @@ class About extends React.Component {
               <h1 className='red name-about'>Professor</h1>
               <h1 className=''>nas Horas Vagas.</h1>
             </section>
+            <section className="about-img-container">
+                <img
+                  className="about-img"
+                  src={edImage}
+                  alt="edmilson-ai"
+                />
+            </section>
           </div>
-          <section className="about-img-container">
-              <img
-                className="about-img"
-                src={edImage}
-                alt="edmilson-ai"
-              />
-          </section>
-          <p>Com 1 ano de experiência na área de programação, meu desejo é sempre superar minhas próprias expectatvas e ser um agente de mudanças.</p>
-          <p>Com mais de 12 anos de experiência em Educação e formado em Engenharia Civil com 4 anos de experiência, já coordenei profissionais em construções residenciais e shopping.</p>
-          <p>Minha paixão por tecnologia veio durante um projeto de uma startup que idealizei mais um colega (engenheiro da computação), que consiste em uma impressora 3D de grande porte que imprime casas residenciais. Desde então, mergulhei de cabeça na área da programação e estou maravilhado.</p>
-          <p>Apesar de não perder o interesse pela área de formação, me encontrei na área de desenvolvimento, que atiçou meu gosto por lógica, raciocínio e inovação.</p>
-          <p>Na área de programação, busco por uma empresa que impacte a sociedade positivamente, com grandes sonhos e com o objetivo principal a satisfação do cliente.</p>
+          <div>
+            <p>Com 1 ano de experiência na área de programação, meu desejo é sempre superar minhas próprias expectatvas e ser um agente de mudanças.</p>
+            <p>Com mais de 12 anos de experiência em Educação e formado em Engenharia Civil com 4 anos de experiência, já coordenei profissionais em construções residenciais e shopping.</p>
+            <p>Minha paixão por tecnologia veio durante um projeto de uma startup que idealizei mais um colega (engenheiro da computação), que consiste em uma impressora 3D de grande porte que imprime casas residenciais. Desde então, mergulhei de cabeça na área da programação e estou maravilhado.</p>
+            <p>Apesar de não perder o interesse pela área de formação, me encontrei na área de desenvolvimento, que atiçou meu gosto por lógica, raciocínio e inovação.</p>
+            <p>Na área de programação, busco por uma empresa que impacte a sociedade positivamente, com grandes sonhos e com o objetivo principal a satisfação do cliente.</p>
+          </div>
         </section>
         <section className='skills'>
           <h1>Hard Skills</h1>

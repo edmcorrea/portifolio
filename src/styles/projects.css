@@ -182,7 +182,6 @@
   }
 
   .project-details {
-
     height: 400px;
   }
 
@@ -201,6 +200,10 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
+  }
+
+  .project-details {
+    height: 300px;
   }
 
   .project {
