@@ -5,28 +5,41 @@ import { mockBack } from '../mocks-projects/mock.back';
 import { mockFront } from '../mocks-projects/mock.front';
 import { mockFull } from '../mocks-projects/mock.full';
 import '../styles/projects.css';
+import { mockAll } from '../mocks-projects/mock.all';
 
 class Projects extends React.Component {
   state = {
-    back: true,
+    all: false,
+    back: false,
     full: false,
-    front: false
+    front: true
   }
 
+  // titleProjects = [
+  //   'All',
+  //   'Landing Pages',
+  //   'Websites',
+  //   'E-commerces',
+  //   'Aplicativos'
+  // ];
+
   handleClick = (value) => {
+    if(value ==='all') {
+      this.setState({ all: true, back: false, full: false, front: false })
+    }
     if(value ==='back') {
-      this.setState({ back: true, full: false, front: false })
+      this.setState({ all: false, back: true, full: false, front: false })
     }
     if(value ==='full') {
-      this.setState({ back: false, full: true, front: false })
+      this.setState({ all: false, back: false, full: true, front: false })
     }
     if(value ==='front') {
-      this.setState({ back: false, full: false, front: true })
+      this.setState({ all: false, back: false, full: false, front: true })
     }
   }
 
   render() {
-    const { back, full, front } = this.state;
+    const { all, back, full, front } = this.state;
     return (
       <div className='project-page'>
         <Header routeHeader="Contato"/>
@@ -37,6 +50,13 @@ class Projects extends React.Component {
             <h1 className='red'>Recentes</h1>
           </div>
           <div className='projects-button'>
+            <button
+              className={ `${all}` }
+              type='button'
+              onClick={() => this.handleClick('all')}
+            >
+              All
+            </button>
             <button
               className={ `${front}` }
               type='button'
@@ -60,6 +80,7 @@ class Projects extends React.Component {
             </button>
           </div>
           <div className='projects'>
+            {all && mockAll.map((project) => <ProjectsDetails mock={project}/>)}
             {back && mockBack.map((project) => <ProjectsDetails mock={project}/>)}
             {full && mockFull.map((project) => <ProjectsDetails mock={project} />)}
             {front && mockFront.map((project) => <ProjectsDetails mock={project} />)}
