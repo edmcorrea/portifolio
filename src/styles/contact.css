@@ -1,14 +1,13 @@
 .contact {
   background-color: black;
-  /* height: 100vh; */
   color: white;
   background-color: rgb(32, 32, 32);
+  min-height: 100vh;
 }
 
 .intro-contact {
   padding: 0 8%;
   font-variant: small-caps;
-  /* font-size: 20px; */
 }
 
 .name-contact {
