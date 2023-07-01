@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&display=swap');
 
 * {
-  /* color: white; */
+  background-color: rgb(32, 32, 32);
   font-family: 'Lexend', sans-serif;
 }
