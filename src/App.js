@@ -6,6 +6,14 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 
 class App extends Component {
+  // FUNÇÃO DE ESCRITA DINAMICA PARA O "h1" => https://www.youtube.com/watch?v=zx2axQoY_YM
+  // function typeWriter(elemento: string) {
+  //   const textoArray = elemento.innerHTML.split('');
+  //   elemento.innerHTML = '';
+  //   textoArray.forEach((letra, i) => {
+  //     setTimeout(() => elemento.innerHTML += letra, 75 * i);
+  //   });
+  // }
   render() {
     return (
       <div>
