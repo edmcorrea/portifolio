@@ -53,6 +53,7 @@ class About extends React.Component {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>React.Js</li>
+                <li>Next.Js</li>
                 <li>Javascript</li>
                 <li>Typescript</li>
               </ul>
@@ -80,7 +81,7 @@ class About extends React.Component {
               <ul>
                 <li>Express</li>
                 <li>Sequelize</li>
-                <li>MySQL - SQL</li>
+                <li>MySQL - PostgreSQL</li>
                 <li>API Restful</li>
                 <li>POO / SOLID</li>
               </ul>
