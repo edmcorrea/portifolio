@@ -1,10 +1,11 @@
 import React from 'react';
-import Header from '../components/header';
-import '../styles/about.css';
-import frontSkill from '../images/front-skills.png';
-import backSkill from '../images/back-skills.png';
-import dsSkill from '../images/data-science-skills.png';
-import edImage from '../images/edmilson-ai.png';
+import Header from '../../components/header';
+import '../../styles/about.css';
+import frontSkill from '../../images/front-skills.png';
+import backSkill from '../../images/back-skills.png';
+import dsSkill from '../../images/data-science-skills.png';
+import edImage from '../../images/edmilson-ai.png';
+import { BackLanguages, BackTools, DataTools, ExtraTools, FrontLanguages, FrontTools, PTIntroductionText } from './Informations';
 
 
 class About extends React.Component {
@@ -35,11 +36,9 @@ class About extends React.Component {
             </section>
           </div>
           <div>
-            <p>Com 1 ano de experiência na área de programação, meu desejo é sempre superar minhas próprias expectatvas e ser um agente de mudanças.</p>
-            <p>Com mais de 12 anos de experiência em Educação e formado em Engenharia Civil com 4 anos de experiência, já coordenei profissionais em construções residenciais e shopping.</p>
-            <p>Minha paixão por tecnologia veio durante um projeto de uma startup que idealizei mais um colega (engenheiro da computação), que consiste em uma impressora 3D de grande porte que imprime casas residenciais. Desde então, mergulhei de cabeça na área da programação e estou maravilhado.</p>
-            <p>Apesar de não perder o interesse pela área de formação, me encontrei na área de desenvolvimento, que atiçou meu gosto por lógica, raciocínio e inovação.</p>
-            <p>Na área de programação, busco por uma empresa que impacte a sociedade positivamente, com grandes sonhos e com o objetivo principal a satisfação do cliente.</p>
+            {PTIntroductionText.map((text, idx) => (
+              <p key={idx}>{text}</p>
+            ))}
           </div>
         </section>
         <section className='skills'>
@@ -50,21 +49,15 @@ class About extends React.Component {
               <h2>Front-End</h2>
               <h4>Linguagem que domino:</h4>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>React.Js</li>
-                <li>Next.Js</li>
-                <li>Javascript</li>
-                <li>Typescript</li>
+                {FrontLanguages.map((lang, idx) => (
+                  <li key={idx}>{lang}</li>
+                ))}
               </ul>
               <h4>Ferramentas Dev:</h4>
               <ul>
-                <li>React-Redux</li>
-                <li>React-Hooks</li>
-                <li>Context-API</li>
-                <li>Bootstrap</li>
-                <li>SASS</li>
-                <li>UI / UX</li>
+                {FrontTools.map((tool, idx) => (
+                  <li key={idx}>{tool}</li>
+                ))}
               </ul>
             </div>
             <div>
@@ -72,18 +65,15 @@ class About extends React.Component {
               <h2>Back-End</h2>
               <h4>Linguagem que domino:</h4>
               <ul>
-                <li>Node.Js</li>
-                <li>Javascript</li>
-                <li>Typescript</li>
-                <li>C# / .Net</li>
+                {BackLanguages.map((lang, idx) => (
+                  <li key={idx}>{lang}</li>
+                ))}
               </ul>
               <h4>Ferramentas Dev:</h4>
               <ul>
-                <li>Express</li>
-                <li>Sequelize</li>
-                <li>MySQL - PostgreSQL</li>
-                <li>API Restful</li>
-                <li>POO / SOLID</li>
+                {BackTools.map((tool, idx) => (
+                  <li key={idx}>{tool}</li>
+                ))}
               </ul>
             </div>
             <div>
@@ -95,21 +85,18 @@ class About extends React.Component {
               </ul>
               <h4>Ferramentas Dev:</h4>
               <ul>
-                <li>Docker</li>
-                <li>Big Data</li>
-                <li>NoSQL</li>
-                <li>MongoDB / Mongoose</li>
-                <li>DevOps</li>
+                {DataTools.map((tool, idx) => (
+                  <li key={idx}>{tool}</li>
+                ))}
               </ul>
             </div>
           </section>
           <div className='adicionais'> 
             <h2>Adicionais</h2>
             <ul>
-              <li>Slack</li>
-              <li>GitHub - Git</li>
-              <li>Figma</li>
-              <li>Docker</li>
+              {ExtraTools.map((tool, idx) => (
+                <li key={idx}>{tool}</li>
+              ))}
             </ul>
           </div>
         </section>
