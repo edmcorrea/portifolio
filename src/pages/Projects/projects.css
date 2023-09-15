@@ -1,8 +1,6 @@
 .project-page {
-  background-color: black;
-  /* height: 100vh; */
   color: white;
-  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(62deg, #141414 0%, #5C5C5C 100%);
 }
 
 .intro-project {
@@ -26,62 +24,31 @@
 }
 
 .projects-button button {
+  background-color: transparent;
   font-size: 25px;
   padding: 0;
-  /* display: flex; */
 }
 
 .projects-button button:hover {
-  color: rgb(216, 2, 2);
+  color: #0F7173;
   scale: 1.05;
 }
 
 .true {
-  background-color: rgb(32, 32, 32);
   border: none;
-  color: rgb(216, 2, 2);
+  color: #0F7173;
   font-size: 25px;
   padding: 20px;
 }
 
 .false {
-  background-color: rgb(32, 32, 32);
   border: none;
   color: white;
   padding: 20px;
   animation: myAnim 2s ease 1.5s 1 normal forwards;
 }
 
-/* @keyframes myAnim {
-	0%,
-	100% {
-		transform: translateX(0);
-	}
-
-	10%,
-	30%,
-	50%,
-	70% {
-		transform: translateX(-5px);
-	}
-
-	20%,
-	40%,
-	60% {
-		transform: translateX(5px);
-	}
-
-	80% {
-		transform: translateX(3px);
-	}
-
-	90% {
-		transform: translateX(-3px);
-	}
-} */
-
 .projects {
-  /* background-color: rgb(32, 32, 32); */
   padding: 50px 3%;
   display: flex;
   flex-wrap: wrap;
@@ -115,11 +82,9 @@
 }
 
 .project div {
-  background: rgba(22, 22, 22, 0.3);
   background-position: center;
   background-size: 160%;
   background-repeat: no-repeat;
-  background-color: rgb(85, 85, 85, 0.3);
   border-radius: 4px;
   display: flex;
   justify-content: space-evenly;
@@ -128,6 +93,11 @@
   flex-grow: 1;
   width: 100%;
   text-align: center;
+}
+
+.project-mirror {
+  background-color: rgb(85, 85, 85, 0.68);
+  backdrop-filter: blur(3px);
 }
 
 .project-title {
@@ -157,7 +127,7 @@
 .btnRepo {
   color: white;
   text-decoration: none;
-  border: 1px solid white;
+  border: 1.5px solid white;
   border-radius: 30px;
   padding: 15px;
   display: flex;
@@ -169,7 +139,7 @@
 
 .btnRepo:hover {
   scale: 1.05;
-  border: 1px solid rgb(216, 2, 2);
+  border: 1.5px solid #0F7173;
 }
 
 @media (max-width: 1200px) {

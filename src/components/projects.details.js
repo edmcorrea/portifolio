@@ -24,11 +24,16 @@ class ProjectsBack extends React.Component {
               <p className='project-title'>{mock.title}</p>
             </div>
           ) : (
-            <div className='' onMouseLeave={this.hoverHandler}>
-              <p className='project-descript'>{mock.description}</p>
-              <a className='btnRepo' href={mock.site} target="_blank" rel="noreferrer">
-                  Visite o Repositório
-              </a>
+            <div
+                onMouseLeave={this.hoverHandler}
+                style={{ backgroundImage: `url(${mock.bgImage})`,}}
+              >
+              <div className='project-mirror'>
+                <p className='project-descript'>{mock.description}</p>
+                <a className='btnRepo' href={mock.site} target="_blank" rel="noreferrer">
+                    Visite o Repositório
+                </a>
+              </div>
             </div>
           )}
         </section>
