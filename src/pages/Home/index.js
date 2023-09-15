@@ -1,10 +1,8 @@
 import React from 'react';
-import '../styles/home.css';
+import './home.css';
 import { connect } from 'react-redux';
-
-// import HomeEn from '../subpage/HomeEn';
-import HomePt from '../subpage/HomePt';
-import { translateAction } from '../redux/actions';
+import HomePt from './HomePt';
+import { translateAction } from '../../redux/actions';
 
 class Home extends React.Component {
   state = {

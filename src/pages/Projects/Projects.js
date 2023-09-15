@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../components/header';
-import ProjectsDetails from '../components/projects.details';
-import { mockBack } from '../mocks-projects/mock.back';
-import { mockFront } from '../mocks-projects/mock.front';
-import { mockFull } from '../mocks-projects/mock.full';
-import '../styles/projects.css';
-import { mockAll } from '../mocks-projects/mock.all';
+import Header from '../../components/Header/header';
+import ProjectsDetails from '../../components/projects.details';
+import { mockBack } from '../../mocks-projects/mock.back';
+import { mockFront } from '../../mocks-projects/mock.front';
+import { mockFull } from '../../mocks-projects/mock.full';
+import './projects.css';
+import { mockAll } from '../../mocks-projects/mock.all';
 
 class Projects extends React.Component {
   state = {

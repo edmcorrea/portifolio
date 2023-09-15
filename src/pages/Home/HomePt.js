@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/home.css';
-import portifolio from '../images/img.png';
+import './home.css';
+import portifolio from '../../images/img.png';
 
 class HomePt extends React.Component {
   state = {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import About from './pages/About/About';
-import Contact from './pages/Contact';
+import Contact from './pages/Contact/Contact';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
+import Projects from './pages/Projects/Projects';
 
 class App extends Component {
   // FUNÇÃO DE ESCRITA DINAMICA PARA O "h1" => https://www.youtube.com/watch?v=zx2axQoY_YM

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/header';
-import '../styles/contact.css';
+import Header from '../../components/Header/header';
+import './contact.css';
 
 class Contact extends React.Component {
   render() {

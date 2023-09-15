@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/home.css';
+import './home.css';
 
 class HomeEn extends React.Component {
   state = {

@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../components/header';
-import '../../styles/about.css';
+import Header from '../../components/Header/header';
+import './about.css';
 import frontSkill from '../../images/front-skills.png';
 import backSkill from '../../images/back-skills.png';
 import dsSkill from '../../images/data-science-skills.png';
 import edImage from '../../images/edmilson-ai.png';
-import { BackLanguages, BackTools, DataTools, ExtraTools, FrontLanguages, FrontTools, PTIntroductionText } from './Informations';
+import { BackLanguages, BackTools, DataTools, ExtraTools, FrontLanguages, FrontTools, PTIntroductionText } from './mocks';
 
 
 class About extends React.Component {
