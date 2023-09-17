@@ -34,14 +34,14 @@
   scale: 1.05;
 }
 
-.true {
+.active {
   border: none;
   color: #0F7173;
   font-size: 25px;
   padding: 20px;
 }
 
-.false {
+.notActive {
   border: none;
   color: white;
   padding: 20px;

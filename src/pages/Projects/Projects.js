@@ -9,37 +9,23 @@ import { mockAll } from '../../mocks-projects/mock.all';
 
 class Projects extends React.Component {
   state = {
-    all: false,
-    back: false,
-    full: false,
-    front: true
-  }
+    category: 'front',
+  };
 
-  // titleProjects = [
-  //   'All',
-  //   'Landing Pages',
-  //   'Websites',
-  //   'E-commerces',
-  //   'Aplicativos'
-  // ];
+  categoryData = {
+    all: mockAll,
+    front: mockFront,
+    back: mockBack,
+    full: mockFull,
+  };
 
   handleClick = (value) => {
-    if(value ==='all') {
-      this.setState({ all: true, back: false, full: false, front: false })
-    }
-    if(value ==='back') {
-      this.setState({ all: false, back: true, full: false, front: false })
-    }
-    if(value ==='full') {
-      this.setState({ all: false, back: false, full: true, front: false })
-    }
-    if(value ==='front') {
-      this.setState({ all: false, back: false, full: false, front: true })
-    }
-  }
+    this.setState({ category: value });
+  };
 
   render() {
-    const { all, back, full, front } = this.state;
+    const { category } = this.state;
+    const projects = this.categoryData[category];
     return (
       <div className='project-page'>
         <Header routeHeader="Contato"/>
@@ -50,40 +36,21 @@ class Projects extends React.Component {
             <h1 className='red'>Recentes</h1>
           </div>
           <div className='projects-button'>
-            <button
-              className={ `${all}` }
-              type='button'
-              onClick={() => this.handleClick('all')}
-            >
-              All
-            </button>
-            <button
-              className={ `${front}` }
-              type='button'
-              onClick={() => this.handleClick('front')}
-            >
-              Front-End
-            </button>
-            <button
-              className={ `${back}` }
-              type='button'
-              onClick={() => this.handleClick('back')}
-            >
-              Back-End
-            </button>
-            <button
-              className={ `${full}` }
-              type='button'
-              onClick={() => this.handleClick('full')}
-            >
-              Full-Stack
-            </button>
+            {Object.keys(this.categoryData).map((cat) => (
+              <button
+                key={cat}
+                className={category === cat ? 'active' : 'notActive'}
+                type='button'
+                onClick={() => this.handleClick(cat)}
+              >
+                {cat === 'all' ? 'All' : `${cat.charAt(0).toUpperCase()}${cat.slice(1)}`}
+              </button>
+            ))}
           </div>
-          <div className='projects'>
-            {all && mockAll.map((project) => <ProjectsDetails mock={project}/>)}
-            {back && mockBack.map((project) => <ProjectsDetails mock={project}/>)}
-            {full && mockFull.map((project) => <ProjectsDetails mock={project} />)}
-            {front && mockFront.map((project) => <ProjectsDetails mock={project} />)}
+          <div className="projects">
+            {projects.map((project) => (
+              <ProjectsDetails key={project.id} mock={project} />
+            ))}
           </div>
         </section>
       </div>
