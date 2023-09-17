@@ -1,13 +1,15 @@
 .languageBtn-container {
-  background-image: linear-gradient(62deg, #141414 0%, #5C5C5C 100%);
+  justify-content: center;
+  background-color: transparent;
   display: flex;
+  padding-bottom: 25px;
 }
 
 .languageBtn {
-  background-color: #141414;
+  background-color: #303030;
+
   display: flex;
   font-size: 14px;
-  /* gap: 20px; */
   border: 1px solid white;
   z-index: 1;
   justify-content: center;
@@ -16,15 +18,74 @@
   border-radius: 30px;
 }
 
-.languageBtn button {
+.languageBtn-btn-selected {
   background-color: #646464;
-  box-shadow: 1px 1px 1px #3f3f3f;
   color: white;
   border: none;
   border-radius: 30px;
   padding: 0px 15px;
 }
 
+.languageBtn-btn {
+  background-color: #303030;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0px 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* .languageBtn-btn:hover {
+  background-color: #646464;
+  transform: scale(1.1);
+} */
+
 .language-img {
   width: 23px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 140px;
+  height: 80px;
+  background-color: red;
+  border-radius: 50px;
+  position: absolute;
+  cursor: pointer;
+  transition: .3s;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #d5d5d5;
+  border-radius: 50%;
+  left: 10px;
+  top: 10px;
+  /* transition: .3s; */
+}
+
+input[type="checkbox"]::after {
+  content: "OFF";
+  position: absolute;
+  color: #34384b;
+  font-size: 20px;
+  left: 20px;
+  top: 29px;
+  transition: .3s;
+}
+
+input[type="checkbox"]:checked {
+  background: linear-gradient(91deg, #ff01a5d4, #4b00ffd4);
+}
+input[type="checkbox"]:checked:before {
+  background: #000;
+  left: 70px;
+}
+input[type="checkbox"]:checked::after {
+  content: "ON";
+  color: #FFF;
+  left: 85px;
 }

@@ -25,6 +25,8 @@ class Home extends React.Component {
         ? <HomeEn />
         : <HomePt />
         } */}
+        <section className='home-sectionImg'></section>
+        <LanguageBtn />
       </div>
     );
   }

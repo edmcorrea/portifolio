@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
+import LanguageBtn from '../../components/LanguageBtn/languageBtn';
 
 
 class HomePt extends React.Component {
@@ -67,8 +68,6 @@ class HomePt extends React.Component {
             <p className='static red' onMouseEnter={() => this.hoverHandler('contact')}>E. Corrêa</p>
             )}
           </section>
-        </section>
-        <section className='home-sectionImg'>
         </section>
       </div>
     );

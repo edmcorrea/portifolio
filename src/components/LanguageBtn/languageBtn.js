@@ -5,22 +5,30 @@ import './languageBtn.css';
 
 class LanguageBtn extends Component {
   state = {
-    selected: true
+    selectedLanguage: 'brl',
   }
   flag = [
     'brl',
     'eua'
   ];
+
+  toggleLanguage = () => {
+    const { selectedLanguage } = this.state;
+    const newLanguage = selectedLanguage === 'eua' ? 'brl' : 'eua';
+    this.setState({ selectedLanguage: newLanguage });
+  };
+
   // Button ENG/POR Example
   // https://codepen.io/alvarotrigo/pen/jOaXGyq
   render() {
-    // const { routeHeader } = this.props;
-    const { selected } = this.state;
+    const { selectedLanguage } = this.state;
     return (
+      <>
       <div className='languageBtn-container'>
         <div className='languageBtn'>
           <button
-            className={`languageBtn-btn${selected ? '-selected' : ''}`}
+            className={`languageBtn-btn${selectedLanguage === 'eua' ? '-selected' : ''}`}
+            onClick={() => {}}
           >
             <img
               className="language-img"
@@ -28,15 +36,24 @@ class LanguageBtn extends Component {
               alt="eua"
             />
           </button>
-          <button>
+          <button
+            className={`languageBtn-btn${selectedLanguage === 'brl' ? '-selected' : ''}`}
+            // onClick={this.toggleLanguage}
+            onClick={() => {}}
+
+          >
             <img
               className="language-img"
               src={brazil}
-              alt="eua"
+              alt="brl"
             />
           </button>
         </div>
       </div>
+      {/* <label>
+        <input type="checkbox" name="switch" id="switch"/>
+      </label> */}
+      </>
     );
   }
 }
