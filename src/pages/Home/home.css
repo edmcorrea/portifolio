@@ -3,13 +3,12 @@
   padding: 0;
 }
 
-
 .home {
   background-image: linear-gradient(62deg, #141414 0%, #5C5C5C 100%);
   display: flex;
   flex-direction: column;
   color: white;
-  font-size: 120px;
+  font-size: 140px;
   font-weight: 700;
 }
 
@@ -17,7 +16,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .btnTranslate:hover {
@@ -25,19 +24,22 @@
 } 
 
 .home-sectionTexts {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   z-index: 1;
   margin: 0 0 0 15%;
+  justify-content: center;
 }
 
 .home-sectionImg {
   position: absolute;
+  height: 100%;
+  width: 40%;
   z-index: 0;
-  right: 7%;
-}
-
-.home-img {
-  width: 100%;
+  right: 0;
+  background: url('../../images/bgHome.png');
+  background-size: cover;
 }
 
 .home-child-sections {
@@ -76,8 +78,11 @@
 @media (max-width: 1200px) {
   .home-sectionTexts {
     background-color: rgba(34, 34, 34, 0.562);
-    border-radius: 30px;
     padding: 0 20px;
+    font-size: 120px;
+    width: 100%;
+    margin: 0;
+    align-items: center;
   }
 }
 
@@ -86,9 +91,12 @@
     font-size: 15vw;
   }
   .home-sectionTexts {
-    margin: auto;
+    font-size: 90px;
   }
-  .home-sectionImg {
-    right: 0;
+}
+
+@media (max-width: 520px) {
+  .home-sectionTexts {
+    font-size: 50px;
   }
 }

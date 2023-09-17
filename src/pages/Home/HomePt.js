@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
-import portifolio from '../../images/img.png';
+
 
 class HomePt extends React.Component {
   state = {
@@ -69,7 +69,6 @@ class HomePt extends React.Component {
           </section>
         </section>
         <section className='home-sectionImg'>
-          <img className='home-img' src={portifolio} alt="Imagem-capa"/>
         </section>
       </div>
     );

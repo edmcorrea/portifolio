@@ -3,6 +3,7 @@ import './home.css';
 import { connect } from 'react-redux';
 import HomePt from './HomePt';
 import { translateAction } from '../../redux/actions';
+import LanguageBtn from '../../components/LanguageBtn/languageBtn';
 
 class Home extends React.Component {
   state = {
