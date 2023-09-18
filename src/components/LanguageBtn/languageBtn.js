@@ -7,6 +7,7 @@ class LanguageBtn extends Component {
   state = {
     selectedLanguage: 'brl',
   }
+  
   flag = [
     'brl',
     'eua'
