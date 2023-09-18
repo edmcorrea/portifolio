@@ -1,75 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 
-class HomeEn extends React.Component {
-  state = {
-    hoverAbout: false,
-    hoverWork: false,
-    hoverContact: false
-  }
+function HomeEn() {
+  const [hoverAbout, setHoverAbout] = useState(false);
+  const [hoverWork, setHoverWork] = useState(false);
+  const [hoverContact, setHoverContact] = useState(false);
 
-  hoverHandlerAbout = () => {
-    const { hoverAbout } = this.state;
-    this.setState({ hoverAbout: !hoverAbout })
-  }
+  const hoverHandler = (value) => {
+    if (value === 'about') {
+      setHoverAbout(!hoverAbout);
+    }
+    if (value === 'projects') {
+      setHoverWork(!hoverWork);
+    }
+    if (value === 'contact') {
+      setHoverContact(!hoverContact);
+    }
+  };
 
-  hoverHandlerWork = () => {
-    const { hoverWork } = this.state;
-    this.setState({ hoverWork: !hoverWork })
-  }
-
-  hoverHandlerContact = () => {
-    const { hoverContact } = this.state;
-    this.setState({ hoverContact: !hoverContact })
-  }
-
-  render() {
-    const { hoverAbout, hoverWork, hoverContact } = this.state;
-    return (
-        <section className='home-section'>
-          <section className='home-child-sections'>
-            { hoverAbout
-            ? (
-            <Link
-              to="/about" className='links'
-              onMouseLeave={this.hoverHandlerAbout}
-            >
+  return (
+    <div className='home-pt'>
+      <section className='home-sectionTexts'>
+        <section className='home-child-sections'>
+          {hoverAbout ? (
+            <Link to="/about" className='links' onMouseLeave={() => hoverHandler('about')}>
               About
             </Link>
-            ) : (
-            <p className='static' onMouseEnter={this.hoverHandlerAbout}>Hello.</p>
-            )}
-          </section>
-          <section className='home-child-sections'>
-            { hoverWork
-            ? (
+          ) : (
+            <p className='static' onMouseEnter={() => hoverHandler('about')}>
+              Hello.
+            </p>
+          )}
+        </section>
+        <section className='home-child-sections'>
+          {hoverWork ? (
             <Link
-              to="/work" className='links red'
-              onMouseLeave={this.hoverHandlerWork}
+              to="/projects"
+              className='links red'
+              onMouseLeave={() => hoverHandler('projects')}
             >
-              Work
+              Projects
             </Link>
-            ) : (
-            <p className='static red' onMouseEnter={this.hoverHandlerWork}>I am</p>
-            )}
-          </section>
-          <section className='home-child-sections'>
-            { hoverContact
-            ? (
+          ) : (
+            <p className='static red' onMouseEnter={() => hoverHandler('projects')}>
+              I am
+            </p>
+          )}
+        </section>
+        <section className='home-child-sections'>
+          {hoverContact ? (
             <Link
-              to="/contact" className='links red'
-              onMouseLeave={this.hoverHandlerContact}
+              to="/contact"
+              className='links red'
+              onMouseLeave={() => hoverHandler('contact')}
             >
               Contact
             </Link>
-            ) : (
-            <p className='static red' onMouseEnter={this.hoverHandlerContact}>E. Corrêa</p>
-            )}
-          </section>
+          ) : (
+            <p className='static red' onMouseEnter={() => hoverHandler('contact')}>
+              E. Corrêa
+            </p>
+          )}
         </section>
-    );
-  }
+      </section>
+    </div>
+  );
 }
 
 export default HomeEn;

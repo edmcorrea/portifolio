@@ -1,50 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class ProjectsBack extends React.Component {
-  state = {
-    hover: true
-  }
+function ProjectsBack({ mock }) {
+  const [hover, setHover] = useState(true);
 
-  hoverHandler = () => {
-    const { hover } = this.state;
-    this.setState({ hover: !hover })
-  }
-  render() {
-    const { mock } = this.props;
-    const { hover } = this.state;
-    return (
-      <div className='project-details'>
-        <section className='project'>
-          { hover
-          ? (
-            <div
-            onMouseEnter={this.hoverHandler}
+  const hoverHandler = () => {
+    setHover(!hover);
+  };
+
+  return (
+    <div className='project-details'>
+      <section className='project'>
+        {hover ? (
+          <div
+            onMouseEnter={hoverHandler}
             style={{ backgroundImage: `url(${mock.bgImage})` }}
-            >
-              <p className='project-title'>{mock.title}</p>
+          >
+            <p className='project-title'>{mock.title}</p>
+          </div>
+        ) : (
+          <div
+            onMouseLeave={hoverHandler}
+            style={{ backgroundImage: `url(${mock.bgImage})` }}
+          >
+            <div className='project-mirror'>
+              <p className='project-descript'>{mock.description}</p>
+              <a className='btnRepo' href={mock.site} target="_blank" rel="noreferrer">
+                Visite o Repositório
+              </a>
             </div>
-          ) : (
-            <div
-                onMouseLeave={this.hoverHandler}
-                style={{ backgroundImage: `url(${mock.bgImage})`,}}
-              >
-              <div className='project-mirror'>
-                <p className='project-descript'>{mock.description}</p>
-                <a className='btnRepo' href={mock.site} target="_blank" rel="noreferrer">
-                    Visite o Repositório
-                </a>
-              </div>
-            </div>
-          )}
-        </section>
-        <section className='project-skills'>
-          {mock.skills.map(skill => (
-            <p>{skill}</p>
-          ))}
-        </section>
-      </div>
-    );
-  }
+          </div>
+        )}
+      </section>
+      <section className='project-skills'>
+        {mock.skills.map((skill, index) => (
+          <p key={index}>{skill}</p>
+        ))}
+      </section>
+    </div>
+  );
 }
 
 export default ProjectsBack;

@@ -3,25 +3,19 @@ import React, { useMemo, useState } from 'react';
 import Context from './Context';
 
 function Provider({ children }) {
-  const [query, setQuery] = useState('');
-  const [searchList, setSearchList] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState('brl');
 
   const toggleLanguage = () => {
-    const { selectedLanguage } = this.state;
     const newLanguage = selectedLanguage === 'eua' ? 'brl' : 'eua';
-    this.setState({ selectedLanguage: newLanguage });
+    setSelectedLanguage(newLanguage);
   };
 
   const context = useMemo(() => ({
-    setQuery,
-    query,
-    setSearchList,
-    searchList,
     toggleLanguage,
+    selectedLanguage,
   }), [
-    query,
-    searchList,
+    toggleLanguage,
+    selectedLanguage,
   ]);
 
   return <Context.Provider value={ context }>{children}</Context.Provider>;
