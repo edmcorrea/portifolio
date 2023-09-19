@@ -5,7 +5,7 @@ import frontSkill from '../../images/front-skills.png';
 import backSkill from '../../images/back-skills.png';
 import dsSkill from '../../images/data-science-skills.png';
 import edImage from '../../images/edmilson-ai.png';
-import { BackLanguages, BackTools, DataTools, ExtraTools, FrontLanguages, FrontTools, PTIntroductionText } from './mocks';
+import { BackLanguages, BackTools, DataTools, ExtraTools, FrontLanguages, FrontTools } from './mockLanguage';
 
 function About() {
   return (
