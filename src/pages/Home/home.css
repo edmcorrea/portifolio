@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   color: white;
-  font-size: 140px;
   font-weight: 700;
   height: 100vh;
 }
@@ -16,8 +15,9 @@
 .home-pt {
   position: relative;
   display: flex;
-  align-items: center;
   height: 100vh;
+  flex-direction: column;
+  font-size: 35px;
 }
 
 .btnTranslate:hover {
@@ -27,10 +27,17 @@
 .home-sectionTexts {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  font-size: 140px;
+  height: 78%;
   z-index: 1;
   margin: 0 0 0 15%;
+  justify-content:end;
+}
+
+.home-subtitle {
+  display: flex;
   justify-content: center;
+  padding: 30px;
 }
 
 .home-sectionImg {
@@ -45,7 +52,6 @@
 
 .home-child-sections {
   background-color: rgba(0, 0, 0, 0);
-  
 }
 
 .home a {
@@ -77,9 +83,12 @@
 }
 
 @media (max-width: 1200px) {
-  .home-sectionTexts {
+  .home {
     background-color: rgba(34, 34, 34, 0.562);
-    padding: 0 20px;
+  }
+
+  .home-sectionTexts {
+    height: 68%;
     font-size: 120px;
     width: 100%;
     margin: 0;
