@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Header from '../../components/Header/header';
 import ProjectsDetails from '../../components/projects.details';
 import { mockBack } from '../../mocks-projects/mock.back';
@@ -6,9 +6,18 @@ import { mockFront } from '../../mocks-projects/mock.front';
 import { mockFull } from '../../mocks-projects/mock.full';
 import './projects.css';
 import { mockAll } from '../../mocks-projects/mock.all';
+import Context from '../../Context/Context';
+import { projectsEng, projectsPor } from './mockLanguage';
 
 function Projects() {
   const [category, setCategory] = useState('front');
+  const { selectedLanguage } = useContext(Context);
+  const [toggleLng, setToggleLng] = useState({});
+
+  useEffect(()=>{
+    if(selectedLanguage==="eua") setToggleLng(projectsEng);
+    else setToggleLng(projectsPor);
+  },[selectedLanguage]);
 
   const categoryData = {
     all: mockAll,
@@ -28,9 +37,9 @@ function Projects() {
       <Header routeHeader="Contato"/>
       <section className='intro-project'>
         <div className='name-project'>
-          <h1>Meus</h1>
-          <h1 className='red'>Projetos</h1>
-          <h1 className='red'>Recentes</h1>
+          <h1>{toggleLng.title1}</h1>
+          <h1 className='red'>{toggleLng.title2}</h1>
+          <h1 className='red'>{toggleLng.title3}</h1>
         </div>
         <div className='projects-button'>
           {Object.keys(categoryData).map((cat) => (
