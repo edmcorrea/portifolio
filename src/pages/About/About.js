@@ -1,29 +1,38 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Header from '../../components/Header/header';
 import './about.css';
 import frontSkill from '../../images/front-skills.png';
 import backSkill from '../../images/back-skills.png';
 import dsSkill from '../../images/data-science-skills.png';
 import edImage from '../../images/edmilson-ai.png';
-import { BackLanguages, BackTools, DataTools, ExtraTools, FrontLanguages, FrontTools } from './mockLanguage';
+import { BackLanguages, BackTools, DataTools, ExtraTools, FrontLanguages, FrontTools, aboutEng, aboutPor } from './mockLanguage';
+import Context from '../../Context/Context';
 
 function About() {
+  const { selectedLanguage } = useContext(Context);
+  const [toggleLng, setToggleLng] = useState({});
+
+  useEffect(()=>{
+    if(selectedLanguage==="eua") setToggleLng(aboutEng);
+    else setToggleLng(aboutPor);
+  },[selectedLanguage]);
+
   return (
     <div className='about'>
       <Header routeHeader="Projetos" />
       <section className='intro-about'>
         <div className='name-about'>
           <section className='row'>
-            <h1 className='red name-about'>Programador</h1>
-            <h1 className=''>por Paixão,</h1>
+            <h1 className='red name-about'>{toggleLng.title1}</h1>
+            <h1 className=''>{toggleLng.title2}</h1>
           </section>
           <section className='row'>
-            <h1 className='red name-about'>Eng. Civil</h1>
-            <h1 className=''>por Formação,</h1>
+            <h1 className='red name-about'>{toggleLng.title3}</h1>
+            <h1 className=''>{toggleLng.title4}</h1>
           </section>
           <section className='row'>
-            <h1 className='red name-about'>Professor</h1>
-            <h1 className=''>nas Horas Vagas.</h1>
+            <h1 className='red name-about'>{toggleLng.title5}</h1>
+            <h1 className=''>{toggleLng.title6}</h1>
           </section>
           <section className="about-img-container">
             <img
@@ -34,9 +43,11 @@ function About() {
           </section>
         </div>
         <div>
-          {PTIntroductionText.map((text, idx) => (
-            <p key={idx}>{text}</p>
-          ))}
+          <p>{toggleLng.paragraph1}</p>
+          <p>{toggleLng.paragraph2}</p>
+          <p>{toggleLng.paragraph3}</p>
+          <p>{toggleLng.paragraph4}</p>
+          <p>{toggleLng.paragraph5}</p>
         </div>
       </section>
       <section className='skills'>
@@ -45,13 +56,13 @@ function About() {
           <div>
             <img className='skill-img' src={frontSkill} alt="front-img" />
             <h2>Front-End</h2>
-            <h4>Linguagem que domino:</h4>
+            <h4>{toggleLng.domain}</h4>
             <ul>
               {FrontLanguages.map((lang, idx) => (
                 <li key={idx}>{lang}</li>
               ))}
             </ul>
-            <h4>Ferramentas Dev:</h4>
+            <h4>{toggleLng.tools}</h4>
             <ul>
               {FrontTools.map((tool, idx) => (
                 <li key={idx}>{tool}</li>
@@ -61,13 +72,13 @@ function About() {
           <div>
             <img className='skill-img' src={backSkill} alt="back-img" />
             <h2>Back-End</h2>
-            <h4>Linguagem que domino:</h4>
+            <h4>{toggleLng.domain}</h4>
             <ul>
               {BackLanguages.map((lang, idx) => (
                 <li key={idx}>{lang}</li>
               ))}
             </ul>
-            <h4>Ferramentas Dev:</h4>
+            <h4>{toggleLng.tools}</h4>
             <ul>
               {BackTools.map((tool, idx) => (
                 <li key={idx}>{tool}</li>
@@ -76,12 +87,12 @@ function About() {
           </div>
           <div>
             <img className='skill-img' src={dsSkill} alt="data-science-img" />
-            <h2>Ciência de Dados</h2>
-            <h4>Linguagem que domino:</h4>
+            <h2>{toggleLng.science}</h2>
+            <h4>{toggleLng.domain}</h4>
             <ul>
               <li>Python</li>
             </ul>
-            <h4>Ferramentas Dev:</h4>
+            <h4>{toggleLng.tools}</h4>
             <ul>
               {DataTools.map((tool, idx) => (
                 <li key={idx}>{tool}</li>
@@ -90,7 +101,7 @@ function About() {
           </div>
         </section>
         <div className='adicionais'>
-          <h2>Adicionais</h2>
+          <h2>{toggleLng.adictions}</h2>
           <ul>
             {ExtraTools.map((tool, idx) => (
               <li key={idx}>{tool}</li>
