@@ -81,7 +81,9 @@ function Home() {
         </section>
       </div>
       <section className='home-sectionImg'></section>
-      <LanguageBtn />
+      <section style={{ paddingBottom: '25px' }}>
+        <LanguageBtn />
+      </section>
     </div>
   );
 }

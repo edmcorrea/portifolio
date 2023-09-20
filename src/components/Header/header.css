@@ -1,30 +1,45 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 25px 65px;
-  color: #555555;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menuPrincipal {
+  align-items: center;
+  width: 100%;
+}
+
+.menuFixo {
+  align-items: center;
+  background-color: #303030;
+  border: 1px solid white;
+  border-radius: 30px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 10px 40px;
+  position: fixed;
+  z-index: 1;
+  top: 10px;
 }
 
 .header a {
-  position: fixed;
+  color: white;
+  font-weight: 700;
   display: flex;
   text-decoration: none;
   font-size: 20px;
-  transition: padding 0.5s;
-}
-
-.header a:visited, .header a:link {
-  color: #555555;
 }
 
 .header a:hover {
   color: #0F7173;
-  padding: 0 1.5%;
   font-weight: 700;
-}
-
-.header h4 {
-  color: white;
+  scale: 1.1;
 }
 
 .header a p:active {
