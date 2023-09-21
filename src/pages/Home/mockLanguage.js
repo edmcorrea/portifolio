@@ -5,7 +5,9 @@ export const homeEng = {
   i: "I am",
   contact: "Contact",
   name: "E.Corrêa",
-  subtitle: "Web Developer"
+  subtitle: "Web Developer",
+  hoverWebsite: "Mouse Over",
+  hoverPhone: "Click on My Name"
 }
 
 export const homePor = {
@@ -15,5 +17,7 @@ export const homePor = {
   i: "Eu Sou",
   contact: "Contato",
   name: "E.Corrêa",
-  subtitle: "Desenvolvedor Web"
+  subtitle: "Desenvolvedor Web",
+  hoverWebsite: "Passe o Mouse",
+  hoverPhone: "Clique no Meu Nome"
 }

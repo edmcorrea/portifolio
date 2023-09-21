@@ -4,6 +4,7 @@ import LanguageBtn from '../../components/LanguageBtn/languageBtn';
 import Context from '../../Context/Context';
 import { homeEng, homePor } from './mockLanguage';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import BackgroundImg from './backgroundImg';
 
 function Home() {
   const { selectedLanguage } = useContext(Context);
@@ -78,9 +79,11 @@ function Home() {
         </section>
         <section className='home-subtitle'>
           <p>{toggleLng.subtitle}</p>
+          {/* <h3>{toggleLng.hoverWebsite}</h3> */}
         </section>
       </div>
-      <section className='home-sectionImg'></section>
+      <BackgroundImg />
+
       <section style={{ paddingBottom: '25px' }}>
         <LanguageBtn />
       </section>

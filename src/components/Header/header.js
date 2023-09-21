@@ -33,21 +33,16 @@ function Header({ routeHeader }) {
           Home
         </Link>
         <Link className='headerRouter' to="/about">
-          <h4>Sobre</h4>
+          Sobre
         </Link>
         <Link className='headerRouter' to="/projects">
-          <h4>Projetos</h4>
+          Projetos
         </Link>
         <Link className='headerRouter' to="/contact">
-          <h4>Contato</h4>
+          Contato
         </Link>
         { showToggle && <LanguageBtn /> }
       </section>
-      {/* <p>Traduzir</p> */}
-      {/* <Link to={`/${routeHeader}`}>
-        <h4>Corrêa.</h4>
-        <p>{routeHeader}</p>
-      </Link> */}
     </div>
   );
 }
