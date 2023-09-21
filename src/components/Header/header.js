@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './header.css';
 import { Link } from 'react-router-dom';
 import LanguageBtn from '../LanguageBtn/languageBtn';
+import Context from '../../Context/Context';
+import { headerEng, headerPor } from './mockLanguage';
 
 function Header({ routeHeader }) {
+  const { selectedLanguage } = useContext(Context);
   const [showToggle, setShowToggle] = useState(true);
+  const [toggleLng, setToggleLng] = useState({});
+
+  useEffect(()=>{
+    if(selectedLanguage==="eua") setToggleLng(headerEng);
+    else setToggleLng(headerPor);
+  },[selectedLanguage]);
 
   const fixHeader = () => {
     let menu = document.getElementById('menu');
@@ -33,13 +42,13 @@ function Header({ routeHeader }) {
           Home
         </Link>
         <Link className='headerRouter' to="/about">
-          Sobre
+        {toggleLng.about}
         </Link>
         <Link className='headerRouter' to="/projects">
-          Projetos
+        {toggleLng.projects}
         </Link>
         <Link className='headerRouter' to="/contact">
-          Contato
+        {toggleLng.contact}
         </Link>
         { showToggle && <LanguageBtn /> }
       </section>
