@@ -49,7 +49,10 @@ function Projects() {
               type='button'
               onClick={() => handleClick(cat)}
             >
-              {cat === 'all' ? 'All' : `${cat.charAt(0).toUpperCase()}${cat.slice(1)}`}
+              {cat === 'all' ? 'All' : (
+                cat === 'full' ? "Full Stack":
+                `${cat.charAt(0).toUpperCase()}${cat.slice(1)}End`
+              )}
             </button>
           ))}
         </div>

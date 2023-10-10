@@ -18,7 +18,7 @@ export const mockBack = [
     bgImage: "https://blog.dyma.fr/content/images/2022/02/python1200x628.png",
     description: 'Conjunto de projetos de Python, trabalhando com as funcionalidades mais solicitadas pelo mercado de trabalho',
     site: 'https://github.com/edmcorrea/python',
-    skills: ['Node.Js', 'Sequelize', 'Express', 'MySQL', 'JWT']
+    skills: ['Python']
   },
   {
     title: 'MEDIEVAL SHOP API',
