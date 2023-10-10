@@ -4,6 +4,7 @@ import Context from './Context';
 
 function Provider({ children }) {
   const [selectedLanguage, setSelectedLanguage] = useState('eua');
+  const [activeLink, setActiveLink] = useState('/');
 
   const toggleLanguage = () => {
     const newLanguage = selectedLanguage === 'eua' ? 'brl' : 'eua';
@@ -13,9 +14,12 @@ function Provider({ children }) {
   const context = useMemo(() => ({
     toggleLanguage,
     selectedLanguage,
+    activeLink,
+    setActiveLink,
   }), [
     toggleLanguage,
     selectedLanguage,
+    activeLink,
   ]);
 
   return <Context.Provider value={ context }>{children}</Context.Provider>;

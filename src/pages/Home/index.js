@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import BackgroundImg from './backgroundImg';
 
 function Home() {
-  const { selectedLanguage } = useContext(Context);
+  const { selectedLanguage, setActiveLink } = useContext(Context);
 
   const [hoverAbout, setHoverAbout] = useState(false);
   const [hoverWork, setHoverWork] = useState(false);
@@ -31,14 +31,24 @@ function Home() {
     }
   };
 
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+  };
+
   return (
     <div className='home'>
       <div className='home-pt'>
         <section className='home-sectionTexts'>
           <section className='home-child-sections'>
             {hoverAbout ? (
-              <Link to="/about" className='links' onMouseLeave={() => hoverHandler('about')}>
+              <Link
+                to="/about"
+                className='links'
+                onMouseLeave={() => hoverHandler('about')}
+                onClick={() => handleLinkClick('/about')}
+              >
                 {toggleLng.about}
+                
               </Link>
             ) : (
               <p className='static' onMouseEnter={() => hoverHandler('about')}>
@@ -52,6 +62,7 @@ function Home() {
                 to="/projects"
                 className='links red'
                 onMouseLeave={() => hoverHandler('projects')}
+                onClick={() => handleLinkClick('/projects')}
               >
                 {toggleLng.projects}
               </Link>
@@ -67,6 +78,7 @@ function Home() {
                 to="/contact"
                 className='links red'
                 onMouseLeave={() => hoverHandler('contact')}
+                onClick={() => handleLinkClick('/contact')}
               >
                 {toggleLng.contact}
               </Link>
@@ -79,7 +91,6 @@ function Home() {
         </section>
         <section className='home-subtitle'>
           <p>{toggleLng.subtitle}</p>
-          {/* <h3>{toggleLng.hoverWebsite}</h3> */}
         </section>
       </div>
       <BackgroundImg />

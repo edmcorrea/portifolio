@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   padding: 25px 65px;
+  /* color: white; */
 }
 
 #menu {
@@ -15,6 +16,7 @@
   width: 100%;
 }
 
+
 .menuFixo {
   background-color: #303030;
   border: 1px solid white;
@@ -27,7 +29,7 @@
   top: 30px;
 }
 
-.header a {
+.linkNotActived {
   color: white;
   font-weight: 700;
   display: flex;
@@ -44,3 +46,11 @@
 .header a p:active {
   color: white;
 }
+
+.headerRouter {
+  color: #0F7173;
+  font-weight: 700;
+  display: flex;
+  text-decoration: none;
+  font-size: 22px;
+  }

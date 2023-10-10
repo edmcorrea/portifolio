@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './header.css';
 import { Link } from 'react-router-dom';
 import LanguageBtn from '../LanguageBtn/languageBtn';
 import Context from '../../Context/Context';
 import { headerEng, headerPor } from './mockLanguage';
 
-function Header({ routeHeader }) {
-  const { selectedLanguage } = useContext(Context);
+function Header() {
+  const { selectedLanguage, activeLink, setActiveLink } = useContext(Context);
   const [showToggle, setShowToggle] = useState(true);
   const [toggleLng, setToggleLng] = useState({});
 
@@ -33,21 +33,41 @@ function Header({ routeHeader }) {
 
   useEffect(()=>{
     fixHeader();
-  },[])
+  },[]);
+
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+  };
 
   return (
     <div className='header'>
       <section id='menu'>
-        <Link className='headerHome' to="/">
+        <Link
+          className={activeLink === '/' ? 'headerRouter' : 'linkNotActived'}
+          to="/"
+          onClick={() => handleLinkClick('/')}
+        >
           Home
         </Link>
-        <Link className='headerRouter' to="/about">
+        <Link 
+          className={activeLink === '/about' ? 'headerRouter' : 'linkNotActived'}
+          to="/about"
+          onClick={() => handleLinkClick('/about')}
+        >
         {toggleLng.about}
         </Link>
-        <Link className='headerRouter' to="/projects">
+        <Link
+          className={activeLink === '/projects' ? 'headerRouter' : 'linkNotActived'}
+          to="/projects"
+          onClick={() => handleLinkClick('/projects')}
+        >
         {toggleLng.projects}
         </Link>
-        <Link className='headerRouter' to="/contact">
+        <Link
+          className={activeLink === '/contact' ? 'headerRouter' : 'linkNotActived'}
+          to="/contact"
+          onClick={() => handleLinkClick('/contact')}
+        >
         {toggleLng.contact}
         </Link>
         { showToggle && <LanguageBtn /> }
@@ -55,9 +75,5 @@ function Header({ routeHeader }) {
     </div>
   );
 }
-
-Header.propTypes = {
-  routeHeader: PropTypes.string
-};
 
 export default Header;
