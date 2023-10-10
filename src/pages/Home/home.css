@@ -118,10 +118,18 @@
   .home-sectionTexts {
     font-size: 90px;
   }
+
+  .home-subtitle {
+    z-index: 1;
+  }
 }
 
 @media (max-width: 520px) {
   .home-sectionTexts {
     font-size: 50px;
+  }
+
+  .home-subtitle {
+    font-size: 20px;
   }
 }

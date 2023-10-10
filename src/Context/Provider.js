@@ -3,7 +3,7 @@ import React, { useMemo, useState } from 'react';
 import Context from './Context';
 
 function Provider({ children }) {
-  const [selectedLanguage, setSelectedLanguage] = useState('brl');
+  const [selectedLanguage, setSelectedLanguage] = useState('eua');
 
   const toggleLanguage = () => {
     const newLanguage = selectedLanguage === 'eua' ? 'brl' : 'eua';
